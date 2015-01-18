@@ -1,3 +1,20 @@
+.container{
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	background-color: #22313F;
+}
+text#text3042{
+	fill: #22313F !important;
+	opacity: 0;
+	-webkit-animation: letras 1s;
+	-webkit-animation-delay: 7s;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.ribbon_box{
+	transform: translateX(-200px);
+}
 .base, .candle{
 	transform: translateY(-500px);
 }
@@ -5,27 +22,27 @@
 	transform: translateX(700px) 
 }
 .cover, .ribbon_box, .box{
-	transform: translateX(500px);
+	opacity:0;
 }
 
 .base:nth-child(2){
-	-webkit-animation: popup 3s;
+	-webkit-animation: popup 2s;
 	-webkit-animation-fill-mode: forwards;
 }
 .base:nth-child(3){
 	-webkit-animation: popup 2s;
-	-webkit-animation-delay: 3s;
+	-webkit-animation-delay: 2s;
 	-webkit-animation-fill-mode: forwards;
 }
 .base:nth-child(4){
 	-webkit-animation: popup 2s;
-	-webkit-animation-delay: 6s;
+	-webkit-animation-delay: 4s;
 	-webkit-animation-fill-mode: forwards;
 }
 
 .candle{
 	-webkit-animation: popup 1s;
-	-webkit-animation-delay: 9s;
+	-webkit-animation-delay: 5s;
 	-webkit-animation-fill-mode: forwards;	
 }
 
@@ -52,9 +69,11 @@
 
 .ribbon{
 	-webkit-animation: bounceInRight 2s;
-	-webkit-animation-delay: 9s;
+	-webkit-animation-delay: 6s;
 	-webkit-animation-fill-mode: forwards;	
 }
+
+
 
 @-webkit-keyframes bounceInRight {
 	0% {
@@ -77,5 +96,56 @@
 	100% {
 	    -webkit-transform: translateX(0);
 	    transform: translateX(0);
+	}
+}
+
+.cover, .ribbon_box, .box{
+	-webkit-animation: zoomIn 1s;
+	-webkit-animation-delay: 7s;
+	-webkit-animation-fill-mode: forwards;	
+}
+
+@-webkit-keyframes zoomIn {
+	0% {
+	    opacity: 0;
+	    -webkit-transform: scale(.3);
+	}
+
+	50% {
+	    opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes letras{
+	5% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.cover, .ribbon_box, .box{
+	-webkit-animation: shake 1s ease alternate infinite;
+	-webkit-animation-delay: 9s;
+}
+
+@-webkit-keyframes shake {
+	0%, 100% {
+	    -webkit-transform: translateX(0);
+	    transform: translateX(0);
+	}
+
+	10%, 30%, 50%, 70%, 90% {
+	    -webkit-transform: translateX(-10px);
+	    transform: translateX(-10px);
+	}
+
+	  20%, 40%, 60%, 80% {
+	    -webkit-transform: translateX(10px);
+	    transform: translateX(10px);
 	}
 }
