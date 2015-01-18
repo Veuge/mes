@@ -1,0 +1,44 @@
+.base, .candle{
+	transform: translateY(-500px);
+}
+.ribbon{
+	fill: #fff !important;
+}
+.cover, .ribbon_box, .box{
+	transform: translateX(500px);
+}
+
+.base:nth-child(2){
+	-webkit-animation: popup 3s;
+	-webkit-animation-fill-mode: forwards;
+}
+.base:nth-child(3){
+	-webkit-animation: popup 3s;
+	-webkit-animation-delay: 4s;
+	-webkit-animation-fill-mode: forwards;
+}
+.base:nth-child(4){
+	-webkit-animation: popup 3s;
+	-webkit-animation-delay: 8s;
+	-webkit-animation-fill-mode: forwards;
+}
+@-webkit-keyframes popup {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-2000px);
+		transform: translateY(-2000px);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translateY(30px);
+		transform: translateY(30px);
+	}
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
