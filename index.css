@@ -2,7 +2,7 @@
 	transform: translateY(-500px);
 }
 .ribbon{
-	fill: #fff !important;
+	transform: translateX(700px) 
 }
 .cover, .ribbon_box, .box{
 	transform: translateX(500px);
@@ -13,15 +13,22 @@
 	-webkit-animation-fill-mode: forwards;
 }
 .base:nth-child(3){
-	-webkit-animation: popup 3s;
-	-webkit-animation-delay: 4s;
+	-webkit-animation: popup 2s;
+	-webkit-animation-delay: 3s;
 	-webkit-animation-fill-mode: forwards;
 }
 .base:nth-child(4){
-	-webkit-animation: popup 3s;
-	-webkit-animation-delay: 8s;
+	-webkit-animation: popup 2s;
+	-webkit-animation-delay: 6s;
 	-webkit-animation-fill-mode: forwards;
 }
+
+.candle{
+	-webkit-animation: popup 1s;
+	-webkit-animation-delay: 9s;
+	-webkit-animation-fill-mode: forwards;	
+}
+
 @-webkit-keyframes popup {
 	0% {
 		opacity: 0;
@@ -40,5 +47,35 @@
 	100% {
 		-webkit-transform: translateY(0);
 		transform: translateY(0);
+	}
+}
+
+.ribbon{
+	-webkit-animation: bounceInRight 2s;
+	-webkit-animation-delay: 9s;
+	-webkit-animation-fill-mode: forwards;	
+}
+
+@-webkit-keyframes bounceInRight {
+	0% {
+	    opacity: 0;
+	    -webkit-transform: translateX(2000px);
+	    transform: translateX(2000px);
+	}
+
+	60% {
+	    opacity: 1;
+	    -webkit-transform: translateX(-30px);
+	    transform: translateX(-30px);
+	}
+
+	80% {
+	    -webkit-transform: translateX(10px);
+	    transform: translateX(10px);
+	}
+
+	100% {
+	    -webkit-transform: translateX(0);
+	    transform: translateX(0);
 	}
 }
